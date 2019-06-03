@@ -1,9 +1,11 @@
-<!-- <mat-form-field class="example-full-width">
-    <input matInput placeholder="Favorite food" value="Sushi" />
-  </mat-form-field> -->
 <mat-card class="mt-3">
   <mat-form-field class="example-full-width">
-    <input matInput type="text" placeholder="Enter a title" />
+    <input
+      matInput
+      type="text"
+      placeholder="Enter a title"
+      [(ngModel)]="enteredTitle"
+    />
   </mat-form-field>
   <mat-form-field class="example-full-width">
     <textarea
@@ -12,6 +14,7 @@
       rows="10"
       name="message"
       placeholder="Enter a comment"
+      [(ngModel)]="enteredContent"
     ></textarea>
   </mat-form-field>
   <button color="accent" mat-raised-button (click)="onAddPost()">
